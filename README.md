@@ -1,6 +1,6 @@
 # Book Cipher Encrypter/Decrypter
 Takes a plain text file as input and encrypts it with Book Cipher using another text file. Decrypts encrypted text files. 
-//talk about GUI and key features
+//talk about GUI and key features (exceptions box, randomizing indexes, double space in encoded to represent single space in encyrpted
 //paste pictures 
 
 ## What is a Book Cipher?
@@ -14,18 +14,19 @@ to represent a character in the encoded message. This results in a longer more c
 Each category of the encoded message is seperated by a space and a double space is equivalent to a space in the decrypted message. 
 Example: An input of 12 35 2 represents the 2nd character in the 35th word on the 12th line of the book text file
 
-## Decrypt a Message
+## Decryption
+### Decrypt a Message
 To decode a message, the user provides:
 - Book File: text file used for indexing
 - Input Decryption File: text file containing the encoded message
 - Output Decryption File: text file that would contain the decrypted message after pressing
 
-## Steps for Encoding
+### Steps to Decrypt File
 - Input Book File in its respective text box and click enter
 - Type the Input and Output Decryption Files into their respective text boxes and click enter
 - If no errors occured the Output Decryption file contains the decrypted message
 
-# Decryption 
+### How the Decryption Function Works? 
 The core algorithm for the decryption function was using regular expressions to create
 the pattern of "(\\d+)\\s(\\d+)\\s(\\d+)(\n+|\\s\\s|\s|$).” Each group besides the last one represents
 the line, word, and character of the index with spaces in between to match the formatting of the
@@ -34,18 +35,19 @@ account for any conditions that could occur. The first three groups are parsed i
 then the indexes are inputted into the bookfile to retrieve character and printed out in the output
 file. And if the input didn’t match the pattern, then the input was not formatted correctly and an exception is thrown. 
 
-## Encrypt a Message
+## Encryption
+### Encrypt a Message
 To encode a message, the user provides:
 1. Book FIle: text file used for indexing
 2. Input Encryption File: text file containing message to encode
 3. Output Encryption File: text file that would contain an encrypted version of the message  
 
-## Steps for Encoding
+### Steps to Encrypt File
 - Input Book File in its respective text box and click enter
 - Type the Input and Output Encryption Files into their respective text boxes and click enter
 - If no errors occured the Output Encryption file contains the encrypted message
 
-### Encryption
+### How the Encryption Function Works?
 Encryption function works by first splitting the letters of the input and creating an array
 to store each line of the book file. A HashMap is instantiated that maps a letter to an ArrayList of
 Indexes from my custom class. Then each index is found by searching through each letter of
