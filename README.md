@@ -45,7 +45,7 @@ To encode a message, the user provides:
 - Type the Input and Output Encryption Files into their respective text boxes and click enter
 - If no errors occured the Output Encryption file contains the encrypted message
 
-## Encryption
+### Encryption
 Encryption function works by first splitting the letters of the input and creating an array
 to store each line of the book file. A HashMap is instantiated that maps a letter to an ArrayList of
 Indexes from my custom class. Then each index is found by searching through each letter of
