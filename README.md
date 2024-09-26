@@ -1,7 +1,7 @@
 # Book Cipher Encrypter/Decrypter
 This application allows users to encrypt or decrypt messages using a Book Cipher technique, utilizing JSwing for the GUI. The program takes a plain text file as input and processes it with a reference text file to produce an encrypted or decrypted output into another file.
 
-GUI Layout for Book Cipher:
+### GUI Layout for Book Cipher:
 
 ![Book Cipher GUI](https://github.com/user-attachments/assets/afb4e720-ddd7-403f-98a2-aba4862698b9)
 
@@ -34,12 +34,16 @@ The core algorithm for the decryption function was using regular expressions to 
 The last group gives the option for a double space, single space, or the end of the line to account for any conditions that could occur. 
 The first three groups are parsed into integers, and then the indexes are inputted into the bookfile to retrieve characters and printed out in the output file. If the input didn’t match the pattern, then the input was not formatted correctly and an exception is thrown. 
 
+#### Example of Successful Decryption:
+
 ![Successful Decryption](https://github.com/user-attachments/assets/4887d0cb-537f-4f6e-88ae-e08c7c609813)
 
 ### How the Encryption Function Works
 The encryption function works by splitting the letters of the input and creating an array to store each line of the book file. A HashMap is instantiated that maps a letter to an ArrayList of Indexes from my custom class. 
 Each index is found by searching through each letter of input, creating an ArrayList of indexes for each letter, going through each line and each word, and searching the word multiple times for the character. The reason for searching numerous times is that if there were several of the same characters in a word, then the .indexOf method would only retrieve the first instance of that letter. 
 To add more complexity, I used the Collections.shuffle method to shuffle all the indexes for each letter, differentiating indexes when the same letter appears multiple times in the input.
+
+#### Example of Successful Encryption:
 
 ![Successful Encryption](https://github.com/user-attachments/assets/81bcacf8-b294-4be5-8b77-f38232a1af74)
 
