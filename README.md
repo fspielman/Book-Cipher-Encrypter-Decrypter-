@@ -1,6 +1,7 @@
 # Book Cipher Encrypter/Decrypter
 This application allows users to encrypt and decrypt messages using a Book Cipher technique, utilizing JSwing for the GUI. The program takes a plain text file as input and processes it with a reference text file to produce an encrypted or decrypted output into another file.
 
+Image of GUI
 ![Book Cipher GUI](https://github.com/user-attachments/assets/afb4e720-ddd7-403f-98a2-aba4862698b9)
 
 ## What is a Book Cipher?
@@ -43,12 +44,19 @@ To add more complexity, I used the Collections.shuffle method to shuffle all the
 ## Exceptions Text Box
 The program also contains an exceptions text box that displays errors when they occur.  
 ### Instances for Exceptions:
-1. Wrong Files
+1. Wrong Files Inputted
+   
 ![Wrong Encryption Files (same functionality for Decryption)](https://github.com/user-attachments/assets/cc2e00fb-34ba-4e0e-aa96-7306ceb6732d)
+
 2. Wrong Decryption Input
+
 ![Wrong Decrypt Input](https://github.com/user-attachments/assets/59a8b36c-1926-430f-87e6-7e3e0d4f0318)
+
 3. Wrong Book FIle Inputed, which makes it unable to encrypt or decrypt
+   
 ![wrong book file inputted, Can't Encrypt or Decrypt](https://github.com/user-attachments/assets/2848ae5f-e2d7-49a1-b0b8-a3f99ada7b6e)
-4. Input not in bookfile
+
+4. Characters in Message are not in the Book File
+   
 ![Input not in bookfile, only encrypts correct input, successful encryption doesn't show up](https://github.com/user-attachments/assets/5d89b914-2272-454f-8fbd-a5268dc9a048)
 
