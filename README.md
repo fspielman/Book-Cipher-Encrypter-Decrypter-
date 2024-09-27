@@ -30,18 +30,18 @@ To Encrypt or Decrypt a Message, the User Provides:
 3. If no errors occur, the Output File will contain the processed message (encrypted or decrypted).
 
 ### How the Decryption Function Works
-The core algorithm for the decryption function was using regular expressions to create the pattern of "(\\d+)\\s(\\d+)\\s(\\d+)(\n+|\\s\\s|\s|$).” Each group besides the last one represents the line, word, and character of the index with spaces in between to match the formatting of the input. 
-The last group gives the option for a double space, single space, or the end of the line to account for any conditions that could occur. 
-The first three groups are parsed into integers, and then the indexes are inputted into the bookfile to retrieve characters and printed out in the output file. If the input didn’t match the pattern, then the input was not formatted correctly and an exception is thrown. 
+- The encryped message is parsed using regular expressions (group for the line, word, letter, and spacing or new line).
+- Retrieves character from the book file using the first three groups from the regex
+- If the input didn’t match the pattern, then the input was not formatted correctly and an exception is thrown. 
 
 #### Example of Successful Decryption:
 
 ![Successful Decryption](https://github.com/user-attachments/assets/4887d0cb-537f-4f6e-88ae-e08c7c609813)
 
 ### How the Encryption Function Works
-The encryption function works by splitting the letters of the input and creating an array to store each line of the book file. A HashMap is instantiated that maps a letter to an ArrayList of Indexes from my custom class. 
-Each index is found by searching through each letter of input, creating an ArrayList of indexes for each letter, going through each line and each word, and searching the word multiple times for the character. The reason for searching numerous times is that if there were several of the same characters in a word, then the .indexOf method would only retrieve the first instance of that letter. 
-To add more complexity, I used the Collections.shuffle method to shuffle all the indexes for each letter, differentiating indexes when the same letter appears multiple times in the input.
+- The input message is split into an array of characters for each line in the message
+- The letter is searched in the book file and inputted into a HashMap to store each index of that letter
+- The Collections.shuffle method shuffles all of the indexes for each letter, differentiating indexes when the same letter appears multiple times in the input.
 
 #### Example of Successful Encryption:
 
