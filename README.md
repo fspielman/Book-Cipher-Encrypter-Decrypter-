@@ -2,6 +2,9 @@
 ## Overview
 This application allows users to encrypt or decrypt messages using a Book Cipher technique, utilizing JSwing for the GUI. The program takes a plain text file as input and processes it with a reference text file to produce an encrypted or decrypted output into another file.
 
+### Prerequisites
+To run the project, [Java Development Kit (JDK)](https://www.oracle.com/java/technologies/javase-downloads.html) must be installed.
+
 ### GUI Layout for Book Cipher:
 
 ![Book Cipher GUI](https://github.com/user-attachments/assets/afb4e720-ddd7-403f-98a2-aba4862698b9)
